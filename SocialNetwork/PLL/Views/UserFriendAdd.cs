@@ -23,15 +23,15 @@ namespace SocialNetwork.PLL.Views
 
         public void Show(User user)
         {
-            try
-            {
+
                 var friendData = new FriendData();
 
                 Console.Write("Введите почтовый адрес вашего друга: ");
                 friendData.FriendEmail = Console.ReadLine();
 
                 friendData.UserId = user.Id;
-
+            try
+            {
                 friendService.AddFriend(friendData);
                 SuccessMessage.Show("Поздравляю! Вы теперь друзья!");
             }
