@@ -43,7 +43,7 @@ namespace SocialNetwork.BLL.Services
                 friend_id = findUserEntity.id,
             };
 
-            if (friendRepository.Create(friendEntity) == 0)
+            if (this.friendRepository.Create(friendEntity) == 0)
                 throw new Exception();
         }
     }

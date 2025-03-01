@@ -21,6 +21,8 @@ namespace SocialNetwork.BLL.Models
         public IEnumerable<Message> IncomingMessages { get; set;  }
         public IEnumerable<Message> OutcomingMessages { get; set;  }
 
+        public IEnumerable<User> Friends { get; set; }
+
         public User(int id, string firstName, string lastName, string password, string email, string photo, string favoriteMovie, 
             string favoriteBook, IEnumerable<Message> incomingMessages, IEnumerable<Message> outcomingMessages)
         {

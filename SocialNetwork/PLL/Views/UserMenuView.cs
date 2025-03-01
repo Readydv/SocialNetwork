@@ -29,11 +29,12 @@ namespace SocialNetwork.PLL.Views
                 Console.WriteLine("Написать сообщение (нажмите 4)");
                 Console.WriteLine("Посмотреть входящие сообщения (нажмите 5)");
                 Console.WriteLine("Посмотреть исходящие сообщения (нажмие 6)");
-                Console.WriteLine("Выйти из профиля (нажмите 7)");
+                Console.WriteLine("Посмотреть список друзей (нажмите 7)");
+                Console.WriteLine("Выйти из профиля (нажмите 8)");
 
                 string keyValue = Console.ReadLine();
 
-                if (keyValue == "7") break;
+                if (keyValue == "8") break;
 
                 switch (keyValue)
                 {
@@ -65,6 +66,11 @@ namespace SocialNetwork.PLL.Views
                     case "6":
                         {
                             Program.userOutcomingMessageView.Show(user.OutcomingMessages);
+                            break;
+                        }
+                    case "7":
+                        {
+                            Program.userFriendsView.Show(user.Friends);
                             break;
                         }
                 }
